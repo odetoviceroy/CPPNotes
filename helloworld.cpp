@@ -29,13 +29,16 @@
 
 
   Chapter 1: Working with Strings
-  - when we ask library to read in a string, it begins by discarding whitespace from the input, then reads characters into 
+  - When we ask library to read in a string, it begins by discarding whitespace from the input, then reads characters into
   name until it encounters another whitespace character or EOF...result of executing cin >> name is to read a word from the
-  standard input, storing in name the character that constitute the word 
-  - IO library saves its output in an internal data structure called a buffer (in general), which it uses to optimize output 
-  operations...library uses the buffer to accumulate the characters to be written, and fluses the buffer, by writing its 
-  contents to the output device, only when necessary...so that it can combine several output output operations into a single write 
-  - 
+  standard input, storing in name the character that constitute the word
+  - IO library saves its output in an internal data structure called a buffer (in general), which it uses to optimize output
+  operations...library uses the buffer to accumulate the characters to be written, and fluses the buffer, by writing its
+  contents to the output device, only when necessary...so that it can combine several output output operations into a single write
+  --------------------------------------------------
+  - The standard output also defines two other ostream objects, named cerr and clog (standard error, general info about the
+  execution of the program)
+  -
 */
 
 #include <iostream>
@@ -45,28 +48,27 @@ using namespace std;
 
 int main(){
   cout << "Please enter your first name: ";
-  
+
   // this reads the name
   string name;
   cin >> name;
+  cout << "Hello, " << name << ", welcome to my program!" << endl;
 
-  // build message we intend to write
-  const string greeting = "Hello," + name + "!";
+  // quick review of while and for loops
+  int val = 50, sum = 0;
+  while(val <= 100){
+    sum += val;
+    ++val;
+  }
+  cout << "Sum of 50 to 100 inclusive is " << sum << "." << endl;
 
-  // build second and fourth lines of output
-  const string spaces(greeting.size(), " ");
-  const string second = "* " + spaces + " *";
+  sum = 0;
+  for(int i = 1; i <= 10; ++i){
+    sum += i;
+  }
+  cout << "Sum of 1 to 10 inclusive is " << sum << "." << endl;
+  
 
-  // build first and fifth lines of output
-  const string first(second.size(), "*");
-
-  // write it all
-  cout << endl;
-  cout << first << endl;
-  cout << second << endl;
-  cout << "* " << greeting << " *" << endl;
-  cout << second << endl;
-  cout << first << endl;
 
   return 0;
 }
