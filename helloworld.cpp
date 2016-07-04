@@ -67,7 +67,14 @@ int main(){
     sum += i;
   }
   cout << "Sum of 1 to 10 inclusive is " << sum << "." << endl;
-  
+
+  /*
+    // For reading an unknown number of inputs, you can say:
+    while (cin >> myValue){
+      sum += value;
+    }
+    cout << "Sum is: " << sum << endl;
+  */
 
 
   return 0;
