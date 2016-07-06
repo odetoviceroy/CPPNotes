@@ -27,7 +27,7 @@ void lifeUniverseEverything(){
 // it is, however, not my code
 // credits go to http://www.sanfoundry.com/cpp-program-implement-sieve-atkins/
 
-void sieveOfAtkins(ll int lowerNum, ll int num){
+void sieveOfAtkin(ll int lowerNum, ll int num){
   vector<bool> is_prime(num + 1);
   is_prime[2] = true;
   is_prime[3] = true;
@@ -92,7 +92,7 @@ int main(void){
         }
       }
       cout << "Here are the prime numbers between " << userInputLowerLimit << " and " << userInputUpperLimit << ", inclusively: " << endl;
-      sieveOfAtkins(userInputLowerLimit, userInputUpperLimit);
+      sieveOfAtkin(userInputLowerLimit, userInputUpperLimit);
     }
     cout << "Would you like to perform another action? [y/n]: ";
     cin >> go_again;
