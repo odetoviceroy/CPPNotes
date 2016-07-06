@@ -65,7 +65,7 @@ void sieveOfAtkin(ll int lowerNum, ll int num){
 
   for(ll int i = 2; i <= num; i++){
     if(is_prime[i] && i >= lowerNum){
-      cout << i << "\t" << endl;
+      cout << i << endl;
     }
   }
 }
